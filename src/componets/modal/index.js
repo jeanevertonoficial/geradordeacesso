@@ -3,7 +3,7 @@ import * as Clipboard from 'expo-clipboard'
 import useStorage from '../../hooks/useStorage'
 
 export function ModalPassword({ password, handleClose }) {
-    const {getItem, saveItem, removeItem} = useStorage();
+    const { saveItem } = useStorage();
 
     async function handleCopyPassword() {
         await Clipboard.setStringAsync(password)

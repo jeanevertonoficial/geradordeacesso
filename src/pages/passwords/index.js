@@ -10,16 +10,19 @@ export function Passwords(){
     const { getItem, removeItem } = useStorage()
 
     useEffect(() => {
-     async function loadPassword() {
-      const passwods = await getItem("@pass")
+     async function loadPasswords() {
+      const passwods = await getItem("@pass");       
       setListPassword(passwods)
     }
-     loadPassword
+     loadPasswords();
     }, [focused])
     return(
         <SafeAreaView style={{ flex:1 }}>
             <View style={styles.header}>
               <Text style={styles.title}>Minha Senhas</Text>
+            </View>
+
+            <View>
             </View>
         </SafeAreaView>
     )
